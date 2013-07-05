@@ -2,14 +2,16 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('mongoose');
+
+var mongoose = require('mongoose/');
 
 require('./models/FunnyNumber');
 require('./models/Tapes');
 
 var express = require('express')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+    , backbone = require('backbone');
 
 mongoose.connect('mongodb://localhost/m101');
 var db = mongoose.connection;
